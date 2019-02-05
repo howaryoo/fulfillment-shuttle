@@ -1,12 +1,22 @@
 import datetime
+import logging
+import pytz
+
+
 
 from dal import get_schedule
+
+logger = logging.getLogger(__name__)
 
 
 def get_time(from_, to_, when, date_param):
     schedule = get_schedule(from_, to_)
     if schedule:
-        now = datetime.datetime.now().time()
+        # FIXME get TZ from DB
+        tz = pytz.timezone('Asia/Jerusalem')
+        now = datetime.datetime.now(tz).time()
+        logger.warning("current time in CGF %s", now)
+
         # FIXME incr time
         # delta = 5  # Minutes
         # now_plus_delta = datetime.time(now.hour, now.minute + delta)
