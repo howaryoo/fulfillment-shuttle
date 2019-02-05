@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import json
+import logging
 
 from flask import Flask, jsonify, make_response, request
 
@@ -24,16 +25,15 @@ def webhook():
         intent_display_name = intent.get("displayName")
 
         # Get the parameters
-        # "parameters": {
-        #     "transport-entities": "shuttle",
-        #     "time-entities": "last",
-        #     "date": ""
-        # },
         transport_entities = req['queryResult']['parameters'].get('transport-entities')
         time_entities = req['queryResult']['parameters'].get('time-entities')
         date_param = req['queryResult']['parameters'].get('date')
         from_ = req['queryResult']['parameters'].get('from')
         to_ = req['queryResult']['parameters'].get('to')
+
+        # TODO log properly
+        print("intent: %s, params: from: %s, to: %s, when: %s" %
+              (intent_display_name, from_, to_, time_entities))
 
         # Query schedule and get response
         time = get_time(from_, to_, time_entities, date_param)
@@ -43,7 +43,6 @@ def webhook():
         # Compose the response to Dialogflow
         res = {'fulfillmentText': output}
     else:
-        # If the request is not to the translate.text action throw an error
         log.error('Unexpected action requested: %s', json.dumps(req))
         res = {'speech': 'error', 'displayText': 'error'}
 
