@@ -1,11 +1,19 @@
 import datetime
 import logging
 
-from google.cloud import firestore
-
 logger = logging.getLogger(__name__)
 
-db = firestore.Client()
+try:
+    import firebase_admin
+    from firebase_admin import firestore
+
+    cred = firebase_admin.credentials.Certificate(
+        "/home/arye/Downloads/fuseteam3-firebase-adminsdk-z6q2n-462e35b9a1.json")
+    firebase_admin.initialize_app(cred)
+    db = firebase_admin.firestore.client()
+except:
+    from google.cloud import firestore
+    db = firestore.Client()
 
 schedule_ref = db.collection(u'schedule')
 

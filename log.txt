@@ -1,320 +1,85 @@
-2019-02-09 20:48:49 default[20190209t220936]  "POST /webhook" 200
-2019-02-09 20:48:49 default[20190209t220936]  {'originalDetectIntentRequest': {'payload': {}},
-2019-02-09 20:48:49 default[20190209t220936]   'queryResult': {'allRequiredParamsPresent': True,
-2019-02-09 20:48:49 default[20190209t220936]                   'fulfillmentMessages': [{'text': {'text': ['']}}],
-2019-02-09 20:48:49 default[20190209t220936]                   'intent': {'displayName': 'adjust-shuttle',
-2019-02-09 20:48:49 default[20190209t220936]                              'name': 'projects/fuseteam3/agent/intents/c8d07a0b-fd43-4d01-b3cb-8657b57ffeb8'},
-2019-02-09 20:48:49 default[20190209t220936]                   'intentDetectionConfidence': 1.0,
-2019-02-09 20:48:49 default[20190209t220936]                   'languageCode': 'en',
-2019-02-09 20:48:49 default[20190209t220936]                   'outputContexts': [{'lifespanCount': 5,
-2019-02-09 20:48:49 default[20190209t220936]                                       'name': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2/contexts/selected-shuttle',
-2019-02-09 20:48:49 default[20190209t220936]                                       'parameters': {'date': '',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'date.original': '',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'duration': {'amount': 30.0,
-2019-02-09 20:48:49 default[20190209t220936]                                                                   'unit': 'min'},
-2019-02-09 20:48:49 default[20190209t220936]                                                      'duration.original': 'half '
-2019-02-09 20:48:49 default[20190209t220936]                                                                           'hour',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'from': 'universita',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'from.original': 'train '
-2019-02-09 20:48:49 default[20190209t220936]                                                                       'station',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'number': '',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'number.original': '',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'time-entities': 'first',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'time-entities.original': 'first',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'to': 'atidim',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'to.original': 'office?',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'transport-entities': 'shuttle',
-2019-02-09 20:48:49 default[20190209t220936]                                                      'transport-entities.original': 'shuttle'}}],
-2019-02-09 20:48:49 default[20190209t220936]                   'parameters': {'duration': {'amount': 30.0, 'unit': 'min'},
-2019-02-09 20:48:49 default[20190209t220936]                                  'number': ''},
-2019-02-09 20:48:49 default[20190209t220936]                   'queryText': 'half hour',
-2019-02-09 20:48:49 default[20190209t220936]                   'sentimentAnalysisResult': {'queryTextSentiment': {'magnitude': 0.1,
-2019-02-09 20:48:49 default[20190209t220936]                                                                      'score': -0.1}}},
-2019-02-09 20:48:49 default[20190209t220936]   'responseId': '362c3ad3-30be-41c7-8d06-50eaf66f3731',
-2019-02-09 20:48:49 default[20190209t220936]   'session': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2'}
-2019-02-09 20:48:49 default[20190209t220936]  request: None
-2019-02-09 20:48:49 default[20190209t220936]  all parameters: {'duration': {'amount': 30.0, 'unit': 'min'}, 'number': ''}
-2019-02-09 20:48:49 default[20190209t220936]  intent: adjust-shuttle, params: from: None, to: None, when: None
-2019-02-09 20:48:49 default[20190209t220936]  No schedule from None to None
-2019-02-10 05:15:27 default[20190210t071155]  [2019-02-10 05:15:27 +0000] [1] [INFO] Starting gunicorn 19.7.1
-2019-02-10 05:15:27 default[20190210t071155]  [2019-02-10 05:15:27 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080 (1)
-2019-02-10 05:15:27 default[20190210t071155]  [2019-02-10 05:15:27 +0000] [1] [INFO] Using worker: sync
-2019-02-10 05:15:27 default[20190210t071155]  [2019-02-10 05:15:27 +0000] [7] [INFO] Booting worker with pid: 7
-2019-02-10 05:23:08 default[20190209t220936]  [2019-02-10 05:23:08 +0000] [1] [INFO] Handling signal: term
-2019-02-10 05:23:08 default[20190209t220936]  [2019-02-10 05:23:08 +0000] [7] [INFO] Worker exiting (pid: 7)
-2019-02-10 05:23:08 default[20190209t220936]  [2019-02-10 05:23:08 +0000] [1] [INFO] Shutting down: Master
-2019-02-10 05:29:19 default[20190210t072538]  [2019-02-10 05:29:19 +0000] [1] [INFO] Starting gunicorn 19.7.1
-2019-02-10 05:29:19 default[20190210t072538]  [2019-02-10 05:29:19 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080 (1)
-2019-02-10 05:29:19 default[20190210t072538]  [2019-02-10 05:29:19 +0000] [1] [INFO] Using worker: sync
-2019-02-10 05:29:19 default[20190210t072538]  [2019-02-10 05:29:19 +0000] [7] [INFO] Booting worker with pid: 7
-2019-02-10 05:35:50 default[20190210t071155]  [2019-02-10 05:35:50 +0000] [1] [INFO] Handling signal: term
-2019-02-10 05:35:50 default[20190210t071155]  [2019-02-10 05:35:50 +0000] [7] [INFO] Worker exiting (pid: 7)
-2019-02-10 05:35:50 default[20190210t071155]  [2019-02-10 05:35:50 +0000] [1] [INFO] Shutting down: Master
-2019-02-10 05:41:30 default[20190210t072538]  {'originalDetectIntentRequest': {'payload': {}},
-2019-02-10 05:41:30 default[20190210t072538]   'queryResult': {'allRequiredParamsPresent': True,
-2019-02-10 05:41:30 default[20190210t072538]                   'fulfillmentMessages': [{'text': {'text': ['']}}],
-2019-02-10 05:41:30 default[20190210t072538]                   'intent': {'displayName': 'find-shuttle',
-2019-02-10 05:41:30 default[20190210t072538]                              'name': 'projects/fuseteam3/agent/intents/de14e7a1-f559-4d54-a55f-951c4d69d04f'},
-2019-02-10 05:41:30 default[20190210t072538]                   'intentDetectionConfidence': 1.0,
-2019-02-10 05:41:30 default[20190210t072538]                   'languageCode': 'en',
-2019-02-10 05:41:30 default[20190210t072538]                   'outputContexts': [{'lifespanCount': 5,
-2019-02-10 05:41:30 default[20190210t072538]                                       'name': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2/contexts/selected-shuttle',
-2019-02-10 05:41:30 default[20190210t072538]                                       'parameters': {'date': '',
-2019-02-10 05:41:30 default[20190210t072538]                                                      'date.original': '',
-2019-02-10 05:41:30 default[20190210t072538]                                                      'from': 'universita',
-2019-02-10 05:41:30 default[20190210t072538]                                                      'from.original': 'train '
-2019-02-10 05:41:30 default[20190210t072538]                                                                       'station',
-2019-02-10 05:41:30 default[20190210t072538]                                                      'time-entities': 'first',
-2019-02-10 05:41:30 default[20190210t072538]                                                      'time-entities.original': 'first',
-2019-02-10 05:41:30 default[20190210t072538]                                                      'to': 'atidim',
-2019-02-10 05:41:30 default[20190210t072538]                                                      'to.original': 'office?',
-2019-02-10 05:41:30 default[20190210t072538]                                                      'transport-entities': 'shuttle',
-2019-02-10 05:41:30 default[20190210t072538]                                                      'transport-entities.original': 'shuttle'}}],
-2019-02-10 05:41:30 default[20190210t072538]                   'parameters': {'date': '',
-2019-02-10 05:41:30 default[20190210t072538]                                  'from': 'universita',
-2019-02-10 05:41:30 default[20190210t072538]                                  'time-entities': 'first',
-2019-02-10 05:41:30 default[20190210t072538]                                  'to': 'atidim',
-2019-02-10 05:41:30 default[20190210t072538]                                  'transport-entities': 'shuttle'},
-2019-02-10 05:41:30 default[20190210t072538]                   'queryText': 'when is the first shuttle from the train '
-2019-02-10 05:41:30 default[20190210t072538]                                'station to the office?',
-2019-02-10 05:41:30 default[20190210t072538]                   'sentimentAnalysisResult': {'queryTextSentiment': {}}},
-2019-02-10 05:41:30 default[20190210t072538]   'responseId': 'a80fd886-49db-461f-89c0-49c7d4a09dd4',
-2019-02-10 05:41:30 default[20190210t072538]   'session': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2'}
-2019-02-10 05:41:30 default[20190210t072538]  request: None
-2019-02-10 05:41:30 default[20190210t072538]  all parameters: {'transport-entities': 'shuttle', 'time-entities': 'first', 'date': '', 'from': 'universita', 'to': 'atidim'}
-2019-02-10 05:41:30 default[20190210t072538]  intent: find-shuttle, params: from: universita, to: atidim, when: first, delta: None, unit: None
-2019-02-10 05:41:31 default[20190210t072538]  current time in CGF 2019-02-10 07:41:31.212396+02:00
-2019-02-10 05:42:15 default[20190210t072538]  {'originalDetectIntentRequest': {'payload': {}},
-2019-02-10 05:42:15 default[20190210t072538]   'queryResult': {'allRequiredParamsPresent': True,
-2019-02-10 05:42:15 default[20190210t072538]                   'fulfillmentMessages': [{'text': {'text': ['']}}],
-2019-02-10 05:42:15 default[20190210t072538]                   'intent': {'displayName': 'adjust-shuttle',
-2019-02-10 05:42:15 default[20190210t072538]                              'name': 'projects/fuseteam3/agent/intents/c8d07a0b-fd43-4d01-b3cb-8657b57ffeb8'},
-2019-02-10 05:42:15 default[20190210t072538]                   'intentDetectionConfidence': 1.0,
-2019-02-10 05:42:15 default[20190210t072538]                   'languageCode': 'en',
-2019-02-10 05:42:15 default[20190210t072538]                   'outputContexts': [{'lifespanCount': 5,
-2019-02-10 05:42:15 default[20190210t072538]                                       'name': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2/contexts/selected-shuttle',
-2019-02-10 05:42:15 default[20190210t072538]                                       'parameters': {'date': '',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'date.original': '',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'duration': {'amount': 1.0,
-2019-02-10 05:42:15 default[20190210t072538]                                                                   'unit': 'h'},
-2019-02-10 05:42:15 default[20190210t072538]                                                      'duration.original': 'one '
-2019-02-10 05:42:15 default[20190210t072538]                                                                           'hour',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'from': 'universita',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'from.original': 'train '
-2019-02-10 05:42:15 default[20190210t072538]                                                                       'station',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'number': '',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'number.original': '',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'time-entities': 'first',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'time-entities.original': 'first',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'to': 'atidim',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'to.original': 'office?',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'transport-entities': 'shuttle',
-2019-02-10 05:42:15 default[20190210t072538]                                                      'transport-entities.original': 'shuttle'}}],
-2019-02-10 05:42:15 default[20190210t072538]                   'parameters': {'duration': {'amount': 1.0, 'unit': 'h'},
-2019-02-10 05:42:15 default[20190210t072538]                                  'number': ''},
-2019-02-10 05:42:15 default[20190210t072538]                   'queryText': 'one hour',
-2019-02-10 05:42:15 default[20190210t072538]                   'sentimentAnalysisResult': {'queryTextSentiment': {}}},
-2019-02-10 05:42:15 default[20190210t072538]   'responseId': '573d1622-7932-4377-8143-3c25ad777ca4',
-2019-02-10 05:42:15 default[20190210t072538]   'session': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2'}
-2019-02-10 05:42:15 default[20190210t072538]  request: None
-2019-02-10 05:42:15 default[20190210t072538]  all parameters: {'duration': {'amount': 1.0, 'unit': 'h'}, 'number': ''}
-2019-02-10 05:42:15 default[20190210t072538]  intent: adjust-shuttle, params: from: universita, to: atidim, when: first, delta: 1.0, unit: h
-2019-02-10 05:42:15 default[20190210t072538]  current time in CGF 2019-02-10 07:42:15.970405+02:00
-2019-02-10 05:54:59 default[20190210t075029]  [2019-02-10 05:54:59 +0000] [1] [INFO] Starting gunicorn 19.7.1
-2019-02-10 05:54:59 default[20190210t075029]  [2019-02-10 05:54:59 +0000] [1] [INFO] Listening at: http://0.0.0.0:8080 (1)
-2019-02-10 05:54:59 default[20190210t075029]  [2019-02-10 05:54:59 +0000] [1] [INFO] Using worker: sync
-2019-02-10 05:54:59 default[20190210t075029]  [2019-02-10 05:54:59 +0000] [7] [INFO] Booting worker with pid: 7
-2019-02-10 06:01:05 default[20190210t072538]  [2019-02-10 06:01:05 +0000] [1] [INFO] Handling signal: term
-2019-02-10 06:01:05 default[20190210t072538]  [2019-02-10 06:01:05 +0000] [7] [INFO] Worker exiting (pid: 7)
-2019-02-10 06:01:05 default[20190210t072538]  [2019-02-10 06:01:05 +0000] [1] [INFO] Shutting down: Master
-2019-02-10 06:09:50 default[20190210t075029]  {'originalDetectIntentRequest': {'payload': {}},
-2019-02-10 06:09:50 default[20190210t075029]   'queryResult': {'allRequiredParamsPresent': True,
-2019-02-10 06:09:50 default[20190210t075029]                   'fulfillmentMessages': [{'text': {'text': ['']}}],
-2019-02-10 06:09:50 default[20190210t075029]                   'intent': {'displayName': 'find-shuttle',
-2019-02-10 06:09:50 default[20190210t075029]                              'name': 'projects/fuseteam3/agent/intents/de14e7a1-f559-4d54-a55f-951c4d69d04f'},
-2019-02-10 06:09:50 default[20190210t075029]                   'intentDetectionConfidence': 1.0,
-2019-02-10 06:09:50 default[20190210t075029]                   'languageCode': 'en',
-2019-02-10 06:09:50 default[20190210t075029]                   'outputContexts': [{'lifespanCount': 5,
-2019-02-10 06:09:50 default[20190210t075029]                                       'name': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2/contexts/selected-shuttle',
-2019-02-10 06:09:50 default[20190210t075029]                                       'parameters': {'date': '2019-03-01T12:00:00+02:00',
-2019-02-10 06:09:50 default[20190210t075029]                                                      'date.original': 'the '
-2019-02-10 06:09:50 default[20190210t075029]                                                                       'first',
-2019-02-10 06:09:50 default[20190210t075029]                                                      'time-entities': 'soon',
-2019-02-10 06:09:50 default[20190210t075029]                                                      'time-entities.original': '',
-2019-02-10 06:09:50 default[20190210t075029]                                                      'transport-entities': '',
-2019-02-10 06:09:50 default[20190210t075029]                                                      'transport-entities.original': ''}}],
-2019-02-10 06:09:50 default[20190210t075029]                   'parameters': {'date': '2019-03-01T12:00:00+02:00',
-2019-02-10 06:09:50 default[20190210t075029]                                  'time-entities': 'soon',
-2019-02-10 06:09:50 default[20190210t075029]                                  'transport-entities': ''},
-2019-02-10 06:09:50 default[20190210t075029]                   'queryText': 'when is the first shuttle from the train '
-2019-02-10 06:09:50 default[20190210t075029]                                'station to the office?',
-2019-02-10 06:09:50 default[20190210t075029]                   'sentimentAnalysisResult': {'queryTextSentiment': {}}},
-2019-02-10 06:09:50 default[20190210t075029]   'responseId': 'e044aa34-38db-481c-9266-e558a9f91940',
-2019-02-10 06:09:50 default[20190210t075029]   'session': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2'}
-2019-02-10 06:09:50 default[20190210t075029]  request: None
-2019-02-10 06:09:50 default[20190210t075029]  all parameters: {'transport-entities': '', 'time-entities': 'soon', 'date': '2019-03-01T12:00:00+02:00'}
-2019-02-10 06:09:50 default[20190210t075029]  intent: find-shuttle, params: from: None, to: None, when: soon, delta: None, unit: None
-2019-02-10 06:09:50 default[20190210t075029]  No schedule from None to None
-2019-02-10 06:11:18 default[20190210t075029]  {'originalDetectIntentRequest': {'payload': {}},
-2019-02-10 06:11:18 default[20190210t075029]   'queryResult': {'allRequiredParamsPresent': True,
-2019-02-10 06:11:18 default[20190210t075029]                   'fulfillmentMessages': [{'text': {'text': ['']}}],
-2019-02-10 06:11:18 default[20190210t075029]                   'intent': {'displayName': 'find-shuttle',
-2019-02-10 06:11:18 default[20190210t075029]                              'name': 'projects/fuseteam3/agent/intents/de14e7a1-f559-4d54-a55f-951c4d69d04f'},
-2019-02-10 06:11:18 default[20190210t075029]                   'intentDetectionConfidence': 0.8,
-2019-02-10 06:11:18 default[20190210t075029]                   'languageCode': 'en',
-2019-02-10 06:11:18 default[20190210t075029]                   'outputContexts': [{'lifespanCount': 5,
-2019-02-10 06:11:18 default[20190210t075029]                                       'name': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2/contexts/selected-shuttle',
-2019-02-10 06:11:18 default[20190210t075029]                                       'parameters': {'date': '',
-2019-02-10 06:11:18 default[20190210t075029]                                                      'date.original': '',
-2019-02-10 06:11:18 default[20190210t075029]                                                      'time-entities': 'soon',
-2019-02-10 06:11:18 default[20190210t075029]                                                      'time-entities.original': '',
-2019-02-10 06:11:18 default[20190210t075029]                                                      'transport-entities': 'shuttle',
-2019-02-10 06:11:18 default[20190210t075029]                                                      'transport-entities.original': 'shuttle'}}],
-2019-02-10 06:11:18 default[20190210t075029]                   'parameters': {'date': '',
-2019-02-10 06:11:18 default[20190210t075029]                                  'time-entities': 'soon',
-2019-02-10 06:11:18 default[20190210t075029]                                  'transport-entities': 'shuttle'},
-2019-02-10 06:11:18 default[20190210t075029]                   'queryText': 'when is my shuttle leaving?',
-2019-02-10 06:11:18 default[20190210t075029]                   'sentimentAnalysisResult': {'queryTextSentiment': {}}},
-2019-02-10 06:11:18 default[20190210t075029]   'responseId': '2ae9ffab-cbb1-4933-ad38-ea2ea7dd7847',
-2019-02-10 06:11:18 default[20190210t075029]   'session': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2'}
-2019-02-10 06:11:18 default[20190210t075029]  request: None
-2019-02-10 06:11:18 default[20190210t075029]  all parameters: {'transport-entities': 'shuttle', 'time-entities': 'soon', 'date': ''}
-2019-02-10 06:11:18 default[20190210t075029]  intent: find-shuttle, params: from: None, to: None, when: soon, delta: None, unit: None
-2019-02-10 06:11:19 default[20190210t075029]  No schedule from None to None
-2019-02-10 06:11:52 default[20190210t075029]  {'originalDetectIntentRequest': {'payload': {}},
-2019-02-10 06:11:52 default[20190210t075029]   'queryResult': {'allRequiredParamsPresent': True,
-2019-02-10 06:11:52 default[20190210t075029]                   'fulfillmentMessages': [{'text': {'text': ['']}}],
-2019-02-10 06:11:52 default[20190210t075029]                   'intent': {'displayName': 'find-shuttle',
-2019-02-10 06:11:52 default[20190210t075029]                              'name': 'projects/fuseteam3/agent/intents/de14e7a1-f559-4d54-a55f-951c4d69d04f'},
-2019-02-10 06:11:52 default[20190210t075029]                   'intentDetectionConfidence': 0.64,
-2019-02-10 06:11:52 default[20190210t075029]                   'languageCode': 'en',
-2019-02-10 06:11:52 default[20190210t075029]                   'outputContexts': [{'lifespanCount': 5,
-2019-02-10 06:11:52 default[20190210t075029]                                       'name': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2/contexts/selected-shuttle',
-2019-02-10 06:11:52 default[20190210t075029]                                       'parameters': {'date': '',
-2019-02-10 06:11:52 default[20190210t075029]                                                      'date.original': '',
-2019-02-10 06:11:52 default[20190210t075029]                                                      'time-entities': 'soon',
-2019-02-10 06:11:52 default[20190210t075029]                                                      'time-entities.original': '',
-2019-02-10 06:11:52 default[20190210t075029]                                                      'transport-entities': '',
-2019-02-10 06:11:52 default[20190210t075029]                                                      'transport-entities.original': ''}}],
-2019-02-10 06:11:52 default[20190210t075029]                   'parameters': {'date': '',
-2019-02-10 06:11:52 default[20190210t075029]                                  'time-entities': 'soon',
-2019-02-10 06:11:52 default[20190210t075029]                                  'transport-entities': ''},
-2019-02-10 06:11:52 default[20190210t075029]                   'queryText': "I'm ready to go",
-2019-02-10 06:11:52 default[20190210t075029]                   'sentimentAnalysisResult': {'queryTextSentiment': {'magnitude': 0.1,
-2019-02-10 06:11:52 default[20190210t075029]                                                                      'score': 0.1}}},
-2019-02-10 06:11:52 default[20190210t075029]   'responseId': '0b1c8af8-fe84-461d-a5ea-4d8174676c98',
-2019-02-10 06:11:52 default[20190210t075029]   'session': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2'}
-2019-02-10 06:11:52 default[20190210t075029]  request: None
-2019-02-10 06:11:52 default[20190210t075029]  all parameters: {'transport-entities': '', 'time-entities': 'soon', 'date': ''}
-2019-02-10 06:11:52 default[20190210t075029]  intent: find-shuttle, params: from: None, to: None, when: soon, delta: None, unit: None
-2019-02-10 06:11:52 default[20190210t075029]  No schedule from None to None
-2019-02-10 06:15:59 default[20190210t075029]  {'originalDetectIntentRequest': {'payload': {}},
-2019-02-10 06:15:59 default[20190210t075029]   'queryResult': {'allRequiredParamsPresent': True,
-2019-02-10 06:15:59 default[20190210t075029]                   'fulfillmentMessages': [{'text': {'text': ['']}}],
-2019-02-10 06:15:59 default[20190210t075029]                   'intent': {'displayName': 'find-shuttle',
-2019-02-10 06:15:59 default[20190210t075029]                              'name': 'projects/fuseteam3/agent/intents/de14e7a1-f559-4d54-a55f-951c4d69d04f'},
-2019-02-10 06:15:59 default[20190210t075029]                   'intentDetectionConfidence': 1.0,
-2019-02-10 06:15:59 default[20190210t075029]                   'languageCode': 'en',
-2019-02-10 06:15:59 default[20190210t075029]                   'outputContexts': [{'lifespanCount': 5,
-2019-02-10 06:15:59 default[20190210t075029]                                       'name': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2/contexts/selected-shuttle',
-2019-02-10 06:15:59 default[20190210t075029]                                       'parameters': {'date': '',
-2019-02-10 06:15:59 default[20190210t075029]                                                      'date.original': '',
-2019-02-10 06:15:59 default[20190210t075029]                                                      'from': 'universita',
-2019-02-10 06:15:59 default[20190210t075029]                                                      'from.original': 'train',
-2019-02-10 06:15:59 default[20190210t075029]                                                      'time-entities': 'soon',
-2019-02-10 06:15:59 default[20190210t075029]                                                      'time-entities.original': '',
-2019-02-10 06:15:59 default[20190210t075029]                                                      'to': 'atidim',
-2019-02-10 06:15:59 default[20190210t075029]                                                      'to.original': 'office',
-2019-02-10 06:15:59 default[20190210t075029]                                                      'transport-entities': 'shuttle',
-2019-02-10 06:15:59 default[20190210t075029]                                                      'transport-entities.original': 'shuttle'}}],
-2019-02-10 06:15:59 default[20190210t075029]                   'parameters': {'date': '',
-2019-02-10 06:15:59 default[20190210t075029]                                  'from': 'universita',
-2019-02-10 06:15:59 default[20190210t075029]                                  'time-entities': 'soon',
-2019-02-10 06:15:59 default[20190210t075029]                                  'to': 'atidim',
-2019-02-10 06:15:59 default[20190210t075029]                                  'transport-entities': 'shuttle'},
-2019-02-10 06:15:59 default[20190210t075029]                   'queryText': 'office',
-2019-02-10 06:15:59 default[20190210t075029]                   'sentimentAnalysisResult': {'queryTextSentiment': {}}},
-2019-02-10 06:15:59 default[20190210t075029]   'responseId': '78fcaf80-584c-4251-848b-99ee5fc6663c',
-2019-02-10 06:15:59 default[20190210t075029]   'session': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2'}
-2019-02-10 06:15:59 default[20190210t075029]  request: None
-2019-02-10 06:15:59 default[20190210t075029]  all parameters: {'to': 'atidim', 'transport-entities': 'shuttle', 'time-entities': 'soon', 'date': '', 'from': 'universita'}
-2019-02-10 06:15:59 default[20190210t075029]  intent: find-shuttle, params: from: universita, to: atidim, when: soon, delta: None, unit: None
-2019-02-10 06:15:59 default[20190210t075029]  current time in CGF 2019-02-10 08:15:59.920422+02:00
-2019-02-10 06:16:19 default[20190210t075029]  {'originalDetectIntentRequest': {'payload': {}},
-2019-02-10 06:16:19 default[20190210t075029]   'queryResult': {'allRequiredParamsPresent': True,
-2019-02-10 06:16:19 default[20190210t075029]                   'fulfillmentMessages': [{'text': {'text': ['']}}],
-2019-02-10 06:16:19 default[20190210t075029]                   'intent': {'displayName': 'adjust-shuttle',
-2019-02-10 06:16:19 default[20190210t075029]                              'name': 'projects/fuseteam3/agent/intents/c8d07a0b-fd43-4d01-b3cb-8657b57ffeb8'},
-2019-02-10 06:16:19 default[20190210t075029]                   'intentDetectionConfidence': 1.0,
-2019-02-10 06:16:19 default[20190210t075029]                   'languageCode': 'en',
-2019-02-10 06:16:19 default[20190210t075029]                   'outputContexts': [{'lifespanCount': 5,
-2019-02-10 06:16:19 default[20190210t075029]                                       'name': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2/contexts/selected-shuttle',
-2019-02-10 06:16:19 default[20190210t075029]                                       'parameters': {'date': '',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'date.original': '',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'duration': {'amount': 30.0,
-2019-02-10 06:16:19 default[20190210t075029]                                                                   'unit': 'min'},
-2019-02-10 06:16:19 default[20190210t075029]                                                      'duration.original': 'half '
-2019-02-10 06:16:19 default[20190210t075029]                                                                           'an '
-2019-02-10 06:16:19 default[20190210t075029]                                                                           'hour',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'from': 'universita',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'from.original': 'train',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'number': '',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'number.original': '',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'time-entities': 'soon',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'time-entities.original': '',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'to': 'atidim',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'to.original': 'office',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'transport-entities': 'shuttle',
-2019-02-10 06:16:19 default[20190210t075029]                                                      'transport-entities.original': 'shuttle'}}],
-2019-02-10 06:16:19 default[20190210t075029]                   'parameters': {'duration': {'amount': 30.0, 'unit': 'min'},
-2019-02-10 06:16:19 default[20190210t075029]                                  'number': ''},
-2019-02-10 06:16:19 default[20190210t075029]                   'queryText': 'half an hour',
-2019-02-10 06:16:19 default[20190210t075029]                   'sentimentAnalysisResult': {'queryTextSentiment': {'magnitude': 0.2,
-2019-02-10 06:16:19 default[20190210t075029]                                                                      'score': -0.2}}},
-2019-02-10 06:16:19 default[20190210t075029]   'responseId': '562cc4d5-c88c-4f6d-bf8e-689ccdb1dd9f',
-2019-02-10 06:16:19 default[20190210t075029]   'session': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2'}
-2019-02-10 06:16:19 default[20190210t075029]  request: None
-2019-02-10 06:16:19 default[20190210t075029]  all parameters: {'duration': {'amount': 30.0, 'unit': 'min'}, 'number': ''}
-2019-02-10 06:16:19 default[20190210t075029]  intent: adjust-shuttle, params: from: universita, to: atidim, when: soon, delta: 30.0, unit: min
-2019-02-10 06:16:19 default[20190210t075029]  current time in CGF 2019-02-10 08:16:19.905524+02:00
-2019-02-10 07:00:46 default[20190210t075029]  {'originalDetectIntentRequest': {'payload': {}},
-2019-02-10 07:00:46 default[20190210t075029]   'queryResult': {'allRequiredParamsPresent': True,
-2019-02-10 07:00:46 default[20190210t075029]                   'fulfillmentMessages': [{'text': {'text': ['']}}],
-2019-02-10 07:00:46 default[20190210t075029]                   'intent': {'displayName': 'find-shuttle',
-2019-02-10 07:00:46 default[20190210t075029]                              'name': 'projects/fuseteam3/agent/intents/de14e7a1-f559-4d54-a55f-951c4d69d04f'},
-2019-02-10 07:00:46 default[20190210t075029]                   'intentDetectionConfidence': 1.0,
-2019-02-10 07:00:46 default[20190210t075029]                   'languageCode': 'en',
-2019-02-10 07:00:46 default[20190210t075029]                   'outputContexts': [{'lifespanCount': 5,
-2019-02-10 07:00:46 default[20190210t075029]                                       'name': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2/contexts/selected-shuttle',
-2019-02-10 07:00:46 default[20190210t075029]                                       'parameters': {'date': '',
-2019-02-10 07:00:46 default[20190210t075029]                                                      'date.original': '',
-2019-02-10 07:00:46 default[20190210t075029]                                                      'from': 'universita',
-2019-02-10 07:00:46 default[20190210t075029]                                                      'from.original': 'train',
-2019-02-10 07:00:46 default[20190210t075029]                                                      'time-entities': 'soon',
-2019-02-10 07:00:46 default[20190210t075029]                                                      'time-entities.original': '',
-2019-02-10 07:00:46 default[20190210t075029]                                                      'to': 'atidim',
-2019-02-10 07:00:46 default[20190210t075029]                                                      'to.original': 'office',
-2019-02-10 07:00:46 default[20190210t075029]                                                      'transport-entities': 'shuttle',
-2019-02-10 07:00:46 default[20190210t075029]                                                      'transport-entities.original': 'shuttle'}}],
-2019-02-10 07:00:46 default[20190210t075029]                   'parameters': {'date': '',
-2019-02-10 07:00:46 default[20190210t075029]                                  'from': 'universita',
-2019-02-10 07:00:46 default[20190210t075029]                                  'time-entities': 'soon',
-2019-02-10 07:00:46 default[20190210t075029]                                  'to': 'atidim',
-2019-02-10 07:00:46 default[20190210t075029]                                  'transport-entities': 'shuttle'},
-2019-02-10 07:00:46 default[20190210t075029]                   'queryText': 'office',
-2019-02-10 07:00:46 default[20190210t075029]                   'sentimentAnalysisResult': {'queryTextSentiment': {}}},
-2019-02-10 07:00:46 default[20190210t075029]   'responseId': '45e627bf-c729-4432-8e1b-6c731207a615',
-2019-02-10 07:00:46 default[20190210t075029]   'session': 'projects/fuseteam3/agent/sessions/547cf98a-bb4b-1ccf-fda5-0ef94adf4ca2'}
-2019-02-10 07:00:46 default[20190210t075029]  request: None
-2019-02-10 07:00:46 default[20190210t075029]  all parameters: {'to': 'atidim', 'transport-entities': 'shuttle', 'time-entities': 'soon', 'date': '', 'from': 'universita'}
-2019-02-10 07:00:46 default[20190210t075029]  intent: find-shuttle, params: from: universita, to: atidim, when: soon, delta: None, unit: None
-2019-02-10 07:00:46 default[20190210t075029]  current time in CGF 2019-02-10 09:00:46.587712+02:00
-2019-02-10 07:01:09 default[20190210t075029]  {'originalDetectIntentRequest': {'payload': {}},
-2019-02-10 07:01:09 default[20190210t075029]   'queryResult': {'allRequiredParamsPresent': True,
-2019-02-10 07:01:09 default[20190210t075029]                   'fulfillmentMessages': [{'text': {'text': ['']}}],
-2019-02-10 07:01:09 default[20190210t075029]                   'intent': {'displayName': 'adjust-shuttle',
-2019-02-10 07:01:09 default[20190210t075029]                              'name': 'projects/fuseteam3/agent/intents/c8d07a0b-fd43-4d01-b3cb-8657b57ffeb8'},
-2019-02-10 07:01:09 default[20190210t075029]                   'intentDetectionConfidence': 1.0,
-2019-02-10 07:01:09 default[20190210t075029]                   'languageCode': 'en',
-2019-02-10 07:01:09 default[20190210t075029]                   'outputContexts': [{'lifespanCount': 5,
-2019-02-10 07:01:09 default[20190210t075029]                                       'nam
+/home/arye/miniconda3/envs/learn/bin/python /home/arye/projects/fulfillment-shuttle/main.py
+ * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 216-345-703
+{'originalDetectIntentRequest': {'payload': {}},
+ 'queryResult': {'allRequiredParamsPresent': True,
+                 'fulfillmentMessages': [{'text': {'text': ['']}}],
+                 'intent': {'displayName': 'find-shuttle',
+                            'name': 'projects/fuseteam3/agent/intents/de14e7a1-f559-4d54-a55f-951c4d69d04f'},
+                 'intentDetectionConfidence': 1.0,
+                 'languageCode': 'en',
+                 'outputContexts': [{'lifespanCount': 5,
+                                     'name': 'projects/fuseteam3/agent/sessions/ebafd42a-3f29-69ae-5d5e-b0cd9e4ae7aa/contexts/selected-shuttle',
+                                     'parameters': {'date': '',
+                                                    'date.original': '',
+                                                    'from': 'atidim',
+                                                    'from.original': 'office',
+                                                    'time-entities': 'soon',
+                                                    'time-entities.original': 'next',
+                                                    'to': 'universita',
+                                                    'to.original': 'train '
+                                                                   'station ?',
+                                                    'transport-entities': 'shuttle',
+                                                    'transport-entities.original': 'shuttle'}}],
+                 'parameters': {'date': '',
+                                'from': 'atidim',
+                                'time-entities': 'soon',
+                                'to': 'universita',
+                                'transport-entities': 'shuttle'},
+                 'queryText': 'when is my next shuttle leaving from the office '
+                              'to the train station ?',
+                 'sentimentAnalysisResult': {'queryTextSentiment': {}}},
+ 'responseId': '3d53af9b-c58f-4588-ad82-19e8e3bb0fd6',
+ 'session': 'projects/fuseteam3/agent/sessions/ebafd42a-3f29-69ae-5d5e-b0cd9e4ae7aa'}
+request: None
+all parameters: {'transport-entities': 'shuttle', 'time-entities': 'soon', 'date': '', 'from': 'atidim', 'to': 'universita'}
+intent: find-shuttle, params: from: atidim, to: universita, when: soon, delta: None, unit: None
+returned_time received from context: None
+current time in CGF 2019-02-10 15:29:01.924298+02:00
+now_plus_delta: 2019-02-10 15:29:01.924298+02:00
+127.0.0.1 - - [10/Feb/2019 15:29:01] "POST /webhook HTTP/1.1" 200 -
+Output: the soon shuttle from atidim to universita is leaving at 15:35
+{'originalDetectIntentRequest': {'payload': {}},
+ 'queryResult': {'allRequiredParamsPresent': True,
+                 'fulfillmentMessages': [{'text': {'text': ['']}}],
+                 'intent': {'displayName': 'adjust-shuttle',
+                            'name': 'projects/fuseteam3/agent/intents/c8d07a0b-fd43-4d01-b3cb-8657b57ffeb8'},
+                 'intentDetectionConfidence': 1.0,
+                 'languageCode': 'en',
+                 'outputContexts': [{'lifespanCount': 5,
+                                     'name': 'projects/fuseteam3/agent/sessions/ebafd42a-3f29-69ae-5d5e-b0cd9e4ae7aa/contexts/selected-shuttle',
+                                     'parameters': {'date': '',
+                                                    'date.original': '',
+                                                    'duration': [{'amount': 30.0,
+                                                                  'unit': 'min'}],
+                                                    'duration.original': 'half '
+                                                                         'an '
+                                                                         'hour',
+                                                    'from': 'atidim',
+                                                    'from.original': 'office',
+                                                    'returned-time': '15:35',
+                                                    'time-entities': 'after',
+                                                    'time-entities.original': 'after',
+                                                    'to': 'universita',
+                                                    'to.original': 'train '
+                                                                   'station ?',
+                                                    'transport-entities': 'shuttle',
+                                                    'transport-entities.original': 'shuttle'}}],
+                 'parameters': {'duration': [{'amount': 30.0, 'unit': 'min'}],
+                                'time-entities': 'after'},
+                 'queryText': 'I need to catch the one leaving half an hour '
+                              'after',
+                 'sentimentAnalysisResult': {'queryTextSentiment': {'magnitude': 0.1,
+                                                                    'score': -0.1}}},
+ 'responseId': '434db6dd-d48b-48af-98f2-776e1121da41',
+ 'session': 'projects/fuseteam3/agent/sessions/ebafd42a-3f29-69ae-5d5e-b0cd9e4ae7aa'}
+request: None
+all parameters: {'duration': [{'amount': 30.0, 'unit': 'min'}], 'time-entities': 'after'}
+intent: adjust-shuttle, params: from: atidim, to: universita, when: after, delta: 30.0, unit: min
+returned_time received from context: 15:35
+current time in CGF 2019-02-10 15:35:15.532884+02:00
+127.0.0.1 - - [10/Feb/2019 15:29:15] "POST /webhook HTTP/1.1" 200 -
+now_plus_delta: 2019-02-10 16:05:15.532884+02:00
+Output: the after shuttle from atidim to universita is leaving at 16:20

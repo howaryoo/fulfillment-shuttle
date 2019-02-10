@@ -28,6 +28,10 @@ def webhook():
         transport_entities, time_entities, date_param, from_, to_, delta_amount, delta_unit = (None, ) * 7
 
         # Get the parameters
+        output_contexts = req['queryResult'].get('outputContexts')
+        # TODO get context name from DF ('selected')
+        selected_context = [c for c in output_contexts if 'selected' in c['name']][0]
+
         if 'find' in intent_display_name:
             transport_entities = req['queryResult']['parameters'].get('transport-entities')
             time_entities = req['queryResult']['parameters'].get('time-entities')
@@ -35,10 +39,6 @@ def webhook():
             from_ = req['queryResult']['parameters'].get('from')
             to_ = req['queryResult']['parameters'].get('to')
         elif 'adjust' in intent_display_name:
-            output_contexts = req['queryResult'].get('outputContexts')
-            # TODO get context name from DF ('selected')
-            selected_context = [c for c in output_contexts if 'selected' in c['name']][0]
-
             if selected_context:
                 transport_entities = selected_context['parameters'].get('transport-entities')
                 time_entities = selected_context['parameters'].get('time-entities')
@@ -47,8 +47,10 @@ def webhook():
                 to_ = selected_context['parameters'].get('to')
 
             duration = req['queryResult']['parameters'].get('duration')
-            delta_amount = duration.get('amount')
-            delta_unit = duration.get('unit')
+            if duration:
+                duration = duration[0]
+                delta_amount = duration.get('amount')
+                delta_unit = duration.get('unit')
 
         # TODO log properly
         print(f"all parameters: {req['queryResult']['parameters']}")
@@ -56,12 +58,21 @@ def webhook():
               (intent_display_name, from_, to_, time_entities, delta_amount, delta_unit))
 
         # Query schedule and get response
-        time = get_time(from_, to_, time_entities, date_param, delta_amount, delta_unit)
+        returned_time = None
+        if selected_context:
+            returned_time = selected_context['parameters'].get('returned-time')
+            print(f"returned_time received from context: {returned_time}")
+        time = get_time(from_, to_, time_entities, date_param, delta_amount, delta_unit, returned_time)
+        # Always update the output context with the returned time
+        selected_context['parameters']['returned-time'] = time
 
         output = f"the {time_entities} {transport_entities} from {from_} to {to_} is leaving at {time}"
+        print(f"Output: {output}")
 
         # Compose the response to Dialogflow
-        res = {'fulfillmentText': output}
+        # FIXME: only one context returned
+        res = {'fulfillmentText': output,
+               'outputContexts': [selected_context]}
     else:
         log.error('Unexpected action requested: %s', json.dumps(req))
         res = {'speech': 'error', 'displayText': 'error'}
