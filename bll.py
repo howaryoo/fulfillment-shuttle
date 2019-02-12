@@ -76,10 +76,10 @@ def get_closest_times(s, from_, to_):
     return list(map(lambda x:x[1], values))
 
 
-import time
-import datetime
-data = get_schedule("atidim", "universita")
-data1, data2 = data[0], data[1]
-print(two_datetime_time_to_second_dif(data1, data2))
-m = get_closest_times("12:34", "atidim", "universita")
-print(m)
+if __name__ == "__main__":
+    import datetime
+    data = get_schedule("atidim", "universita")
+    data1, data2 = data[0], data[1]
+    print(two_datetime_time_to_second_dif(data1, data2))
+    m = get_closest_times("12:34", "atidim", "universita")
+    print(m)
