@@ -30,3 +30,7 @@ def get_schedule(from_, to_):
                          [timestr.split(':') for timestr in schedule['times']]]
         schedule_time.sort()
         return schedule_time
+
+
+if __name__ == '__main__':
+    print(get_schedule('atidim', 'universita'))

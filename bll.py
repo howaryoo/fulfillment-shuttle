@@ -10,11 +10,13 @@ logger = logging.getLogger(__name__)
 
 def get_time(from_, to_, when, date_param=None, delta_amount=None, delta_unit=None, returned_time=None):
     schedule = get_schedule(from_, to_)
+    if date_param:
+        date_param = datetime.datetime.fromisoformat(date_param)
     if schedule:
         # FIXME get TZ from DB
         tz = pytz.timezone('Asia/Jerusalem')
-        now = datetime.datetime.now(tz)
-        if returned_time:
+        now = date_param if date_param else datetime.datetime.now(tz)
+        if not date_param and returned_time:
             hour, min = map(int, returned_time.split(':'))
             now = now.replace(hour=hour, minute=min)
         logger.warning("current time in CGF %s", now)

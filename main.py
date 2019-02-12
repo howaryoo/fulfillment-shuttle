@@ -35,14 +35,14 @@ def webhook():
         if 'find' in intent_display_name:
             transport_entities = req['queryResult']['parameters'].get('transport-entities')
             time_entities = req['queryResult']['parameters'].get('time-entities')
-            date_param = req['queryResult']['parameters'].get('date')
+            date_param = req['queryResult']['parameters'].get('time')
             from_ = req['queryResult']['parameters'].get('from')
             to_ = req['queryResult']['parameters'].get('to')
         elif 'adjust' in intent_display_name:
             if selected_context:
                 transport_entities = selected_context['parameters'].get('transport-entities')
                 time_entities = selected_context['parameters'].get('time-entities')
-                date_param = selected_context['parameters'].get('date')
+                date_param = selected_context['parameters'].get('time')
                 from_ = selected_context['parameters'].get('from')
                 to_ = selected_context['parameters'].get('to')
 
@@ -66,7 +66,11 @@ def webhook():
         # Always update the output context with the returned time
         selected_context['parameters']['returned-time'] = time
 
-        output = f"the {time_entities} {transport_entities} from {from_} to {to_} is leaving at {time}"
+        if time:
+            output = f"the requested {transport_entities} from {from_} to {to_} is leaving at {time}"
+        else:
+            output = f"No schedule from {from_} to {to_} available"
+
         print(f"Output: {output}")
 
         # Compose the response to Dialogflow
