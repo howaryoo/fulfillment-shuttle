@@ -9,6 +9,17 @@ logger = logging.getLogger(__name__)
 
 
 def get_time(from_, to_, when, date_param=None, delta_amount=None, delta_unit=None, returned_time=None):
+    """
+
+    :param from_: string, for now "atidim", "universita"
+    :param to_: same
+    :param when: "soon", "first", "last"
+    :param date_param:  time, string, 24 hr clock 16:04 semi military time
+    :param delta_amount:
+    :param delta_unit:
+    :param returned_time:
+    :return:
+    """
     schedule = get_schedule(from_, to_)
     if date_param:
         date_param = datetime.datetime.fromisoformat(date_param)
@@ -41,3 +52,36 @@ def get_time(from_, to_, when, date_param=None, delta_amount=None, delta_unit=No
 
         if requested_time:
             return datetime.time.strftime(requested_time, '%H:%M')
+
+def datetime_time_to_timedeltha(t):
+    import datetime
+    return datetime.timedelta(hours=t.hour, minutes=t.minute, seconds=t.second)
+
+def two_datetime_time_to_second_dif(t, t1):
+    d, d1 = datetime_time_to_timedeltha(t), datetime_time_to_timedeltha(t1)
+    return abs(d.total_seconds() - d1.total_seconds())
+
+def str2datatime_time(s):
+    import datetime
+    h, m = map(lambda x: int(x), s.split(":"))
+    return datetime.time(hour=h, minute=m)
+
+def get_closest_times(s, from_, to_):
+    """
+
+    :param s: time string in 24 hr format hh:mm
+    :return: 3 closest times.
+    """
+    data = get_schedule(from_, to_)
+    time_dist = map(lambda x: two_datetime_time_to_second_dif(str2datatime_time(s), x), data)
+    values = sorted(zip(time_dist, data), key=lambda x: x[0])
+    return list(map(lambda x:x[1], values))
+
+
+if __name__ == "__main__":
+    import datetime
+    data = get_schedule("atidim", "universita")
+    data1, data2 = data[0], data[1]
+    print(two_datetime_time_to_second_dif(data1, data2))
+    m = get_closest_times("12:34", "atidim", "universita")
+    print(m)
