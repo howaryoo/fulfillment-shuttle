@@ -48,7 +48,6 @@ def webhook():
 
             duration = req['queryResult']['parameters'].get('duration')
             if duration:
-                duration = duration[0]
                 delta_amount = duration.get('amount')
                 delta_unit = duration.get('unit')
 
