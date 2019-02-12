@@ -1,0 +1,5 @@
+Flask==0.12.2
+google-cloud-firestore==0.31.0
+gunicorn==19.7.1
+pytz==2018.9
+firebase-admin==2.15.1
